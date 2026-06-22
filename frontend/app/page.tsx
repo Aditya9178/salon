@@ -2,22 +2,14 @@
 
 import Link from 'next/link';
 import { ArrowRight, Scissors, Sparkles, Droplets, SprayCan, Beaker, CheckCircle } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import LandingNav from '@/components/layout/LandingNav';
 
 export default function LandingPage() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div style={{ backgroundColor: '#000000', color: '#ffffff', minHeight: '100vh', fontFamily: 'var(--font-sans)', overflowX: 'hidden' }}>
       
+      {/* Shared Navbar */}
+      <LandingNav activePage="home" />
       {/* Navbar */}
       <nav className={`landing-nav ${scrolled ? 'scrolled' : ''}`}>
         <div className="landing-nav-container">
