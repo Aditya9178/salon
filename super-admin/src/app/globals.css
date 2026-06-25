@@ -28,6 +28,14 @@ input[type="number"] {
   -moz-appearance: textfield !important; /* Firefox */
 }
 
+@media print {
+  @page {
+    margin: 0; /* Removes browser default header/footer (URL, date, page numbers) */
+  }
+  body {
+    padding: 1.5cm; /* Adds back some margin to the printed page */
+  }
+}
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }

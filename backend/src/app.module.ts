@@ -11,6 +11,7 @@ import { SupabaseModule } from './supabase/supabase.module';
 import { SalonsModule } from './salons/salons.module';
 import { SubscriptionsModule } from './subscriptions/subscriptions.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { ReportsModule } from './reports/reports.module';
 import { PlatformSettingsModule } from './platform-settings/platform-settings.module';
 
 @Module({
@@ -27,6 +28,7 @@ import { PlatformSettingsModule } from './platform-settings/platform-settings.mo
     SalonsModule,
     SubscriptionsModule,
     PrismaModule,
+    ReportsModule,
     PlatformSettingsModule,
   ],
 })
