@@ -10,7 +10,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Top Bar */}
-      <div className="md:hidden bg-white border-b border-gray-200 p-4 grid grid-cols-3 items-center sticky top-0 z-30 shadow-sm">
+      <div className="md:hidden bg-white border-b border-gray-200 p-4 grid grid-cols-3 items-center sticky top-0 z-30 shadow-sm print:hidden">
         <div className="flex justify-start">
           <button onClick={() => setIsOpen(!isOpen)} className="p-2 bg-gray-50 rounded-md text-gray-600 hover:bg-gray-100 transition">
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -35,7 +35,7 @@ export default function Sidebar() {
       {/* Sidebar */}
       <aside className={`
         fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 flex flex-col h-full shrink-0 shadow-sm transition-transform duration-300 ease-in-out
-        md:translate-x-0 md:static md:z-auto
+        md:translate-x-0 md:static md:z-auto print:hidden
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}>
         <div className="p-4 items-center border-b border-gray-100 hidden md:flex">
